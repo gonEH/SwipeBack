@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
 
     lintOptions {
         abortOnError false
@@ -11,7 +10,7 @@ android {
     defaultConfig {
         applicationId "com.liuguangqiang.swiplebacksample"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -24,8 +23,8 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.github.liuguangqiang.prettyprogressbar:library:+'
-    compile project(':library')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:25.0.1'
+    implementation 'com.github.liuguangqiang.prettyprogressbar:library:+'
+    implementation project(':library')
 }

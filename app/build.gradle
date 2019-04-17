@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.liuguangqiang.swiplebacksample"
-        minSdkVersion 14
+        minSdkVersion 9
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -25,6 +25,13 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:25.0.1'
-    implementation 'com.github.liuguangqiang.prettyprogressbar:library:+'
+//    implementation 'com.github.liuguangqiang.prettyprogressbar:library:+'
+    implementation(name: 'com.liuguangqiang.progressbar-1.0', ext: 'aar')
     implementation project(':library')
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
 }
